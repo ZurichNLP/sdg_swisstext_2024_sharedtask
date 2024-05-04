@@ -1,11 +1,26 @@
 # SwissText 2024 Shared Task 
 ## Automatic Classification of the United Nations' Sustainable Development Goals (SDGs) and Their Targets in English Scientific Abstracts
 This repository will serve as a platform for distributing the data and evaluation scripts for both subtasks.
-The release of the first data set will be by the 12th of February 2024.
 
 For questions regarding the shared tasks or data, please open an issue (preferred), or write to simon.clematide@cl.uzh.ch. 
 
 Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for-shared-tasks/
+
+## Submissions
+- Each team can submit up to 3 runs. Send a zip archive with a JSONL file named `TEAM_RUN1_TASK1.jsonl`.
+- The format of the submission should be identical to the format of the training/sample data.
+
+## Schedule
+- 12th February 2024: Announcement of Shared Task on Swiss NLP
+- 12th February 2024: Release of first batch of training data for Task 1
+- 2nd March 2024: Release of development data for Task 2
+- 10th May 2024 08:00 CEST: Release of test data for Task 1 to participants
+- 13th May 2024 08:00 CEST: Deadline for submission of results for Task 1 (per mail to tobias.fankhauserATuzh.ch)
+- 13th May 2024 08:00 CEST: Release of test data for Task 2 to participants (test data of Task 1 with ground truth labels)
+- 15th May 2024 23:59 CEST: Submission of results for Task 2 (per mail to tobias.fankhauserATuzh.ch)
+- 21st May 2024: Deadline for System Descriptions/Papers (official template of SwissText)
+- 31st May 2024: Deadline for Workshop Papers (online publication)
+- 11th June 2024 10:20-12:30 CEST: 2-h Workshop and Lunch Meeting at the SwissText Conference in Chur: “NLP for Sustainable Development Goals Monitoring” (Shared Task Results Presentation and Stakeholder Meeting); Online participation via Zoom is possible.
 
 ### Data
 The distributed data will be in JSON Lines (JSONL) format, where each line is a separate JSON object representing a scientific abstract. Below is the structure and explanation of fields present in the dataset:
