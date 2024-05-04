@@ -9,6 +9,7 @@ Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for
 ## Submissions
 - Each team can submit up to 3 runs. Send a zip archive with a JSONL file named `TEAM_RUN1_TASK1.jsonl`.
 - The format of the submission should be identical to the format of the training/sample data.
+- Hackathon-like submissions (24-48h of work) are welcome. Please indicate in your submission mail whether your submission should be categorized as hackathon-like.
 
 ## Schedule
 - 12th February 2024: Announcement of Shared Task on Swiss NLP
