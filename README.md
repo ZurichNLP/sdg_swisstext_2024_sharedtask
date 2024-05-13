@@ -12,6 +12,8 @@ Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for
 
 - 2024/05/10: Test data with 156 new abstracts for Task 1 has been released:
   `data/task1_test-covered.jsonl`. Good luck with your submission!
+- 2024/05/13: Test data with 91 abstracts for Task 2 has been released:
+  `data/task2_test-covered.jsonl`. Good luck with your submission!
 
 ## Submissions
 
