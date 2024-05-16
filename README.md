@@ -30,8 +30,10 @@ Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for
 - 13th May 2024 08:00 CEST: Deadline for submission of results for Task 1 (per mail to tobias.fankhauserATuzh.ch)
 - 13th May 2024 08:00 CEST: Release of test data for Task 2 to participants (test data of Task 1 with ground truth labels)
 - 15th May 2024 23:59 CEST: Submission of results for Task 2 (per mail to tobias.fankhauserATuzh.ch)
-- 21st May 2024: Deadline for System Descriptions/Papers (official template of SwissText)
-- 31st May 2024: Deadline for Workshop Papers (online publication)
+- 21st May 2024: Draft submission for System Descriptions/Papers intended for online publication (official template of SwissText 3-6 pages): Send via E-mail to simon.clematideATuzh.ch
+- 21st May 2024: Participants who don't want to publish a workshop-like short paper are strongly invited to send a short description of their approach that will be used for the shared task overview paper written by the organizers
+- 24st May 2024: Notification of acceptance of System Description Papers
+- 31st May 2024: Deadline for final System Description Papers for online publication (similar to Workshop Papers from SwissText); authors are expected to present their approach in a 8-10 minute presentation at the workshop (onsite if possible)
 - 11th June 2024 10:20-12:30 CEST: 2-h Workshop and Lunch Meeting at the SwissText Conference in Chur: “NLP for Sustainable Development Goals Monitoring” (Shared Task Results Presentation and Stakeholder Meeting); Online participation via Zoom is possible.
 
 ### Data
