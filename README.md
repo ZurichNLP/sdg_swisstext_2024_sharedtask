@@ -47,8 +47,8 @@ The distributed data will be in JSON Lines (JSONL) format, where each line is a 
   "ABSTRACT": "the full text of the abstract (string)",
   "URL": "a link to the full document (string)",
   "SDG": "for Task 1, an integer representing the SDG the abstract is classified under. SDGs are numbered from 0 to 17, where 0 represents the ‘non-relevant’ category.",
-  "MAIN_TARGET": "for Task 2, a string representing the primary SDG target the abstract addresses",
-  "SECONDARY_TARGETS": "for Task 2, an array of strings representing additional SDG targets the abstract addresses"
+  "TARGET": "for Task 2, a string representing the primary SDG target the abstract addresses",
+  "TARGETS": "for Task 2, an array of strings representing all SDG targets the abstract addresses"
 }
 ```
 
@@ -73,7 +73,7 @@ The distributed data will be in JSON Lines (JSONL) format, where each line is a 
   "ABSTRACT": "As part of a trans-disciplinary research project, a series of surveys and interventions were conducted in different arsenic-affected regions of rural Bangladesh. Surveys of institutional stakeholders identified deep tubewells and piped water systems as the most preferred options, and the same preferences were found in household surveys of populations at risk. Psychological surveys revealed that these two technologies were well-supported by potential users, with self-efficacy and social norms being the principle factors driving behavior change. The principle drawbacks of deep tubewells are that installation costs are too high for most families to own private wells, and that for various socio-cultural-religious reasons, people are not willing to walk long distances to access communal tubewells. In addition, water sector planners have reservations about greater exploitation of the deep aquifer, out of concern for current or future geogenic contamination. Groundwater models and field studies have shown that in the great majority of the affected areas, the risk of arsenic contamination of deep groundwater is small; salinity, iron, and manganese are more likely to pose problems. These constituents can in some cases be avoided by exploiting an intermediate depth aquifer of good chemical quality, which is hydraulically and geochemically separate from the arsenic-contaminated shallow aquifer. Deep tubewells represent a technically sound option throughout much of the arsenic-affected regions, and future mitigation programs should build on and accelerate construction of deep tubewells. Utilization of deep tubewells, however, could be improved by increasing the tubewell density (which requires stronger financial support) to reduce travel times, by considering water quality in a holistic way, and by accompanying tubewell installation with motivational interventions based on psychological factors. By combining findings from technical and social sciences, the efficiency and success of arsenic mitigation in general - and installation of deep tubewells in particular - can be significantly enhanced.",
   "URL": "https://www.zora.uzh.ch/id/eprint/89201",
   "SDG": 6,
-  "MAIN_TARGET": "6.1",
-  "SECONDARY_TARGETS": ["6.3", "6.5"]
+  "TARGET": "6.1",
+  "TARGETS": ["6.1", "6.3", "6.5"]
 }
 ```
