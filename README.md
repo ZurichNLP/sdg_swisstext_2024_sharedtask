@@ -21,6 +21,9 @@ Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for
 - The format of the submission should be identical to the format of the training/sample data.
 - Hackathon-like submissions (24-48h of work) are welcome. Please indicate in your submission mail whether your submission should be categorized as hackathon-like.
 
+To evaluate your predictions, create a folder in the `data/participant_submissions` directory with your team name. Load the result files as `.jsonl` into this folder and name them: `teamname_task1_run1.jsonl` (for Task 1) or `teamname_task2_run1.jsonl` (for Task 2). From the root folder, run `python evaluation/evaluation.py`. The results will be saved in `results/task1` or `results/task2`, depending on the task.
+
+
 ## Schedule
 
 - 12th February 2024: Announcement of Shared Task on Swiss NLP
