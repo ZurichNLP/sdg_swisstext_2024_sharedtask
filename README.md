@@ -8,6 +8,22 @@ For questions regarding the shared tasks or data, please open an issue (preferre
 
 Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for-shared-tasks/
 
+## Workshop Program at Swisstext 2024 June 11th 10:30 to 12 "NLP for Sustainable Development Goals Monitoring"
+
+  1. Welcome + Shared-Task Overview: Simon Clematide + Tobias Fankhauser (15-20 min)
+
+  2. Jürgen Bernard (UZH): The DZI Project “SDG Research Scout” and its visualisation aspects (20 min)
+
+  3. Presentation of the Shared Task contributions with System Description Papers (15 min each)
+
+  - Fernando de Meer Pardo, Hanna Hubarava and Vera Bernhard (UZH): System Description Paper for SwissText 2024 Shared Task 1: Classification at the Level of the 17 SDGs
+  - Manuel Bolz, Andreas Loizidis, Kevin Bründler (UZH): SwissText - Shared Task (SDG Classification) - Task 1
+  - Adrian M.P. Brasoveanu, Albert Weichselbraun, Lyndon J.B. Nixon and Arno Scharl (MODUL University Vienna/webLyzard): An Efficient Workflow Towards Improving Classifiers in Low-Resource Settings with Synthetic Data
+  - Norman Süsstrunk, Albert Weichselbraun, Andreas Murk, Roger Waldvogel and André Glatzl (Chur): Scouting out the Border: Leveraging Explainable AI to Generate Synthetic Training Data for SDG Classification
+
+  4. Final discussion «NLP for Sustainability» (15 min)
+
+
 ## News
 
 - 2024/05/10: Test data with 156 new abstracts for Task 1 has been released:
@@ -37,7 +53,7 @@ To evaluate your predictions, create a folder in the `data/participant_submissio
 - 21st May 2024: Participants who don't want to publish a workshop-like short paper are strongly invited to send a short description of their approach that will be used for the shared task overview paper written by the organizers
 - 24st May 2024: Notification of acceptance of System Description Papers
 - 31st May 2024: Deadline for final System Description Papers for online publication (similar to Workshop Papers from SwissText); authors are expected to present their approach in a 8-10 minute presentation at the workshop (onsite if possible)
-- 11th June 2024 10:20-12:30 CEST: 2-h Workshop and Lunch Meeting at the SwissText Conference in Chur: “NLP for Sustainable Development Goals Monitoring” (Shared Task Results Presentation and Stakeholder Meeting); Online participation via Zoom is possible.
+- 11th June 2024 10:20-12:30 CEST: 2-h Workshop and Lunch Meeting at the SwissText Conference in Chur: “NLP for Sustainable Development Goals Monitoring” (Shared Task Results Presentation and Stakeholder Meeting); Online participation via Webex is possible.
 
 ### Data
 
