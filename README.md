@@ -23,6 +23,7 @@ Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for
 
   4. Final discussion «NLP for Sustainability» (15 min)
 
+For online participation via webex, please contact simon.clematideATuzh.ch.
 
 ## News
 
