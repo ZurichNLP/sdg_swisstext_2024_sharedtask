@@ -135,24 +135,47 @@ cot_message = [
 ```
 
 ### Results Task 1
-| Team                      | Run                  | ACC  | MACRO-F | MACRO-P | MACRO-R | W-P  | W-R  | W-F  |
-|---------------------------|----------------------|------|---------|---------|---------|------|------|------|
-| NLPChur                   | badwords             | 52%  | 51%     | 53%     | 60%     | 65%  | 52%  | 55%  |
-| test_roberta_base_synth   | 33                   | 49%  | 56%     | 65%     | 66%     | 74%  | 49%  | 53%  |
-| MANUEL_ANDREAS_KEVIN      | GPT4                 | 47%  | 44%     | 46%     | 52%     | 65%  | 47%  | 51%  |
-| bcode                     | 1                    | 47%  | 35%     | 42%     | 37%     | 56%  | 47%  | 49%  |
-| NLPChur                   | synthetic data       | 46%  | 44%     | 49%     | 51%     | 59%  | 46%  | 49%  |
-| test_roberta_base_synth   | 31                   | 46%  | 51%     | 61%     | 58%     | 69%  | 46%  | 49%  |
-| MANUEL_ANDREAS_KEVIN      | ensemble             | 45%  | 43%     | 46%     | 52%     | 68%  | 45%  | 49%  |
-| MANUEL_ANDREAS_KEVIN      | MIXTRAL              | 45%  | 45%     | 54%     | 56%     | 74%  | 45%  | 50%  |
-| test_roberta_base_synth   | 32                   | 40%  | 51%     | 58%     | 61%     | 64%  | 40%  | 42%  |
-| MeHuBe                    | 1                    | 39%  | 42%     | 45%     | 53%     | 58%  | 39%  | 41%  |
-| MeHuBe                    | 2                    | 38%  | 41%     | 41%     | 53%     | 55%  | 38%  | 40%  |
-| MeHuBe                    | 3                    | 38%  | 41%     | 41%     | 53%     | 55%  | 38%  | 39%  |
-| PRONTO                    | 1                    | 38%  | 52%     | 54%     | 71%     | 70%  | 38%  | 36%  |
-| llama3_cot                | 1                    | 37%  | 52%     | 54%     | 64%     | 65%  | 37%  | 36%  |
-| llama3                    | 1                    | 32%  | 45%     | 50%     | 67%     | 77%  | 32%  | 25%  |
-| AVERAGE                   |                      | 43%  | 46%     | 51%     | 57%     | 65%  | 43%  | 44%  |
+| Team                      | Run                  | ACC  | MACRO-F                                                 | MACRO-P | MACRO-R | W-P  | W-R  | W-F  |
+|---------------------------|----------------------|------|---------------------------------------------------------|---------|---------|------|------|------|
+| NLPChur                   | badwords             | <span style="background-color: yellow">**52%**</span>  | 51%                                                     | 53%     | 60%     | 65%  | **52%**  | **55%**  |
+| test_roberta_base_synth   | 33                   | 49%  | <span style="background-color: lightgrey">**56%**</span> | **65%**     | 66%     | 74%  | 49%  | 53%  |
+| MANUEL_ANDREAS_KEVIN      | GPT4                 | 47%  | 44%                                                     | 46%     | 52%     | 65%  | 47%  | 51%  |
+| bcode                     | 1                    | 47%  | 35%                                                     | 42%     | 37%     | 56%  | 47%  | 49%  |
+| NLPChur                   | synthetic data       | 46%  | 44%                                                     | 49%     | 51%     | 59%  | 46%  | 49%  |
+| test_roberta_base_synth   | 31                   | 46%  | 51%                                                     | 61%     | 58%     | 69%  | 46%  | 49%  |
+| MANUEL_ANDREAS_KEVIN      | ensemble             | 45%  | 43%                                                     | 46%     | 52%     | 68%  | 45%  | 49%  |
+| MANUEL_ANDREAS_KEVIN      | MIXTRAL              | 45%  | 45%                                                     | 54%     | 56%     | 74%  | 45%  | 50%  |
+| test_roberta_base_synth   | 32                   | 40%  | 51%                                                     | 58%     | 61%     | 64%  | 40%  | 42%  |
+| MeHuBe                    | 1                    | 39%  | 42%                                                     | 45%     | 53%     | 58%  | 39%  | 41%  |
+| MeHuBe                    | 2                    | 38%  | 41%                                                     | 41%     | 53%     | 55%  | 38%  | 40%  |
+| MeHuBe                    | 3                    | 38%  | 41%                                                     | 41%     | 53%     | 55%  | 38%  | 39%  |
+| PRONTO                    | 1                    | 38%  | 52%                                                     | 54%     | **71%**     | 70%  | 38%  | 36%  |
+| llama3_cot                | 1                    | 37%  | 52%                                                     | 54%     | 64%     | 65%  | 37%  | 36%  |
+| llama3                    | 1                    | 32%  | 45%                                                     | 50%     | 67%     | **77%**  | 32%  | 25%  |
+| AVERAGE                   |                      | 43%  | 46%                                                     | 51%     | 57%     | 65%  | 43%  | 44%  |
+
+#### Secondary Evaluation Results
+
+The secondary evaluation considers a prediction correct if the predicted label is relevant to the abstract, even if it is not the main SDG.
+
+| Team                      | Run                  | ACC                                                   | MACRO-F                                                  | MACRO-P | MACRO-R | W-P  | W-R  | W-F  |
+|---------------------------|----------------------|-------------------------------------------------------|----------------------------------------------------------|---------|---------|------|------|------|
+| NLPChur                   | badwords             | <span style="background-color: yellow">**55%**</span> | 56%                                                      | 61%     | 55%     | 68%  | **55%**  | **58%**  |
+| test_roberta_base_synth   | 33                   | 52%                                                   | <span style="background-color: lightgrey">**68%**</span> | **67%**     | **59%**     | 75%  | 52%  | 55%  |
+| NLPChur                   | synthetic data       | 50%                                                   | 55%                                                      | 53%     | 49%     | 64%  | 50%  | 53%  |
+| MANUEL_ANDREAS_KEVIN      | MIXTRAL              | 50%                                                   | 59%                                                      | 61%     | 52%     | 75%  | 50%  | 54%  |
+| test_roberta_base_synth   | 31                   | 50%                                                   | 66%                                                      | 63%     | 58%     | 69%  | 50%  | 53%  |
+| MANUEL_ANDREAS_KEVIN      | ensemble             | 49%                                                   | 51%                                                      | 58%     | 49%     | 69%  | 49%  | 53%  |
+| MANUEL_ANDREAS_KEVIN      | GPT4                 | 49%                                                   | 49%                                                      | 54%     | 47%     | 66%  | 49%  | 53%  |
+| bcode                     | 1                    | 48%                                                   | 46%                                                      | 39%     | 38%     | 58%  | 48%  | 51%  |
+| test_roberta_base_synth   | 32                   | 43%                                                   | 62%                                                      | 63%     | 56%     | 65%  | 43%  | 45%  |
+| MeHuBe                    | 1                    | 42%                                                   | 49%                                                      | 58%     | 47%     | 60%  | 42%  | 43%  |
+| MeHuBe                    | 2                    | 42%                                                   | 45%                                                      | 57%     | 45%     | 58%  | 42%  | 42%  |
+| PRONTO                    | 1                    | 42%                                                   | 57%                                                      | 73%     | 57%     | 70%  | 42%  | 38%  |
+| MeHuBe                    | 3                    | 41%                                                   | 45%                                                      | 56%     | 45%     | 57%  | 41%  | 42%  |
+| llama3_cot                | 1                    | 40%                                                   | 59%                                                      | 68%     | 56%     | 68%  | 40%  | 39%  |
+| llama3                    | 1                    | 36%                                                   | 54%                                                      | **69%**     | 50%     | **77%**  | 36%  | 29%  |
+| AVERAGE                   |                      | 46%                                                   | 55%                                                      | 60%     | 51%     | 67%  | 46%  | 47%  |
 
 #### Legend
 
