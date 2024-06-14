@@ -97,3 +97,71 @@ The distributed data will be in JSON Lines (JSONL) format, where each line is a 
   "TARGETS": ["6.1", "6.3", "6.5"]
 }
 ```
+
+## Results and Baseline Models
+
+### Baseline Models
+
+The baseline models for this shared task are LLAMA 3 ([source](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)). These models are used to evaluate the scientific abstracts and assign them to the most appropriate United Nations Sustainable Development Goal (SDG).
+
+#### Baseline LLAMA 3
+
+```python
+message = [
+{
+   "role": "system",
+   "content": "As an SDG assignment assistant, your task is to evaluate scientific abstracts and assign them to the most appropriate United Nations Sustainable Development Goal (SDG) based on a specific target within the SDG. You should only assign an SDG if there is a clear and direct connection between the abstract content and a concrete target of the SDG. If the abstract generally relates to the SDG but does not align with a specific target, or if no SDG target is applicable, assign it to 'SDG 0'.\n\n{sdg_descriptions}\n"
+},
+{
+   "role": "user",
+   "content": "For the following scientific abstract: \"{TITLE}\n{ABSTRACT}\", identify and assign the most appropriate SDG based on a concrete target within that SDG that the abstract covers. If no specific target is applicable, return 'SDG 0'. Assigned SDG:"
+}
+]
+```
+
+##### LLAMA 3, Chain of Thought (CoT)
+    
+```python
+cot_message = [
+   {
+       "role": "system",
+       "content": "As an SDG assignment assistant, your task involves a three-step reasoning process: 1) Analyze the main topics and objectives of the provided scientific abstract. 2) Justify which concrete target within the United Nations Sustainable Development Goals (SDG) aligns directly with these topics. 3) Determine the appropriate SDG based on this target. Only assign an SDG if a specific target is directly covered by the abstract; otherwise, assign 'SDG 0'. Use the following examples to guide your response:\n\nExample 1:\nAbstract: \"The Success of Job Applications: A New Approach to Program Evaluation. In this paper, we suggest a novel approach to program evaluation...\"\nResponse: First, analyze the main topics... Then, identify Target 4.4... Final determination: SDG 4, focusing on Target 4.4.\n\nExample 2:\nAbstract: \"Approval of Equal Rights and Gender Differences in Well-Being. Women earn less than men but are not less satisfied with life...\"\nResponse: First, describe the main topics... Since no specific target applies, assign 'SDG 0'.\n"
+   },
+   {
+       "role": "user",
+       "content": "For this scientific abstract: \"{TITLE}\n{ABSTRACT}\", first describe its main topics, then identify and justify the specific SDG target it covers, and conclude with the corresponding SDG assignment. If no specific target applies, assign 'SDG 0'. Final determination:"
+   }
+]
+```
+
+### Results Task 1
+| Team                      | Run                  | ACC  | MACRO-F | MACRO-P | MACRO-R | W-P  | W-R  | W-F  |
+|---------------------------|----------------------|------|---------|---------|---------|------|------|------|
+| NLPChur                   | badwords             | 52%  | 51%     | 53%     | 60%     | 65%  | 52%  | 55%  |
+| test_roberta_base_synth   | 33                   | 49%  | 56%     | 65%     | 66%     | 74%  | 49%  | 53%  |
+| MANUEL_ANDREAS_KEVIN      | GPT4                 | 47%  | 44%     | 46%     | 52%     | 65%  | 47%  | 51%  |
+| bcode                     | 1                    | 47%  | 35%     | 42%     | 37%     | 56%  | 47%  | 49%  |
+| NLPChur                   | synthetic data       | 46%  | 44%     | 49%     | 51%     | 59%  | 46%  | 49%  |
+| test_roberta_base_synth   | 31                   | 46%  | 51%     | 61%     | 58%     | 69%  | 46%  | 49%  |
+| MANUEL_ANDREAS_KEVIN      | ensemble             | 45%  | 43%     | 46%     | 52%     | 68%  | 45%  | 49%  |
+| MANUEL_ANDREAS_KEVIN      | MIXTRAL              | 45%  | 45%     | 54%     | 56%     | 74%  | 45%  | 50%  |
+| test_roberta_base_synth   | 32                   | 40%  | 51%     | 58%     | 61%     | 64%  | 40%  | 42%  |
+| MeHuBe                    | 1                    | 39%  | 42%     | 45%     | 53%     | 58%  | 39%  | 41%  |
+| MeHuBe                    | 2                    | 38%  | 41%     | 41%     | 53%     | 55%  | 38%  | 40%  |
+| MeHuBe                    | 3                    | 38%  | 41%     | 41%     | 53%     | 55%  | 38%  | 39%  |
+| PRONTO                    | 1                    | 38%  | 52%     | 54%     | 71%     | 70%  | 38%  | 36%  |
+| llama3_cot                | 1                    | 37%  | 52%     | 54%     | 64%     | 65%  | 37%  | 36%  |
+| llama3                    | 1                    | 32%  | 45%     | 50%     | 67%     | 77%  | 32%  | 25%  |
+| AVERAGE                   |                      | 43%  | 46%     | 51%     | 57%     | 65%  | 43%  | 44%  |
+
+#### Legend
+
+- **Team**: Name of the team participating in the shared task.
+- **Run**: Specific run or configuration submitted by the team.
+- **ACC**: Accuracy of the model in classifying the abstracts.
+- **MACRO-F**: Macro-averaged F1 score, measuring the balance between precision and recall across all classes.
+- **MACRO-P**: Macro-averaged Precision, measuring the proportion of true positive results among all positive results predicted.
+- **MACRO-R**: Macro-averaged Recall, measuring the proportion of true positive results among all actual positive instances.
+- **W-P**: Weighted Precision, accounting for the number of true instances for each class.
+- **W-R**: Weighted Recall, accounting for the number of true instances for each class.
+- **W-F**: Weighted F1 score, balancing precision and recall while considering the number of true instances for each class.
