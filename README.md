@@ -98,6 +98,12 @@ The distributed data will be in JSON Lines (JSONL) format, where each line is a 
 }
 ```
 
+In addition, the `data` folder contains the following subdirectories:
+
+- `participant_submissions`: This folder stores the submissions from participants, specifically their classification results.
+- `synthetic_data`: This folder holds the synthetic data provided by participants, organized in subfolders named after each participating group.
+
+
 ## Results and Baseline Models
 
 ### Baseline Models
