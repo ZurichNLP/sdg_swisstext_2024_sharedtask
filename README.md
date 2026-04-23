@@ -6,7 +6,7 @@ This repository will serve as a platform for distributing the data and evaluatio
 
 For questions regarding the shared tasks or data, please open an issue (preferred), or write to simon.clematide@cl.uzh.ch.
 
-Details can be found at the SwissNLP Website: https://www.swisstext.org/call-for-shared-tasks/
+Details can be found at the SwissNLP Website: [https://www.swisstext.org/call-for-shared-tasks/](https://www.swisstext.org/archive/2024/call-for-shared-tasks/)
 
 ## Workshop Program at Swisstext 2024 June 11th 10:30 to 12 "NLP for Sustainable Development Goals Monitoring"
 
